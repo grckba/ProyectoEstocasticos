@@ -11,11 +11,14 @@ package proyectoestocasticos;
  */
 public class Agente {
     
-    Beneficio beneficioPropio;  // Matriz con beneficios para cada escenario
-    int estrategia;             // 0 para moderada, 1 para agresiva
+    int numAlternativas = 2;
+    Alternativa alternativa[] = new Alternativa[numAlternativas];
     
-    public Agente(){
-        beneficioPropio = new Beneficio();
+    public Agente(float gananciasA1[][], float gananciasA2[][]){
+        
+        alternativa[1]= new Alternativa(gananciasA1);
+        alternativa[2]= new Alternativa(gananciasA2);
+        
     }
     
 }
